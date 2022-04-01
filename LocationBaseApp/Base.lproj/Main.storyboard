@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iEv-qR-5Ww">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationBaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1662" y="82"/>
+        </scene>
+        <!--Distance-->
+        <scene sceneID="Vgd-9Z-3Jg">
+            <objects>
+                <viewController storyboardIdentifier="CurrentDistanceVC" id="RCI-ya-0Zs" customClass="CurrentDistanceVC" customModule="LocationBaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h45-j3-jHQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Distance Travelled" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcB-G4-9Js">
+                                <rect key="frame" x="47.5" y="266" width="319" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-Ka-HFY">
+                                <rect key="frame" x="20" y="330.5" width="374" height="36.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mez-pZ-zfz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aQY-Ka-HFY" firstAttribute="top" secondItem="HcB-G4-9Js" secondAttribute="bottom" constant="30" id="2HX-j0-u2J"/>
+                            <constraint firstItem="aQY-Ka-HFY" firstAttribute="centerX" secondItem="mez-pZ-zfz" secondAttribute="centerX" id="I3J-Ji-7GN"/>
+                            <constraint firstItem="HcB-G4-9Js" firstAttribute="centerX" secondItem="aQY-Ka-HFY" secondAttribute="centerX" id="Uf1-iV-1jD"/>
+                            <constraint firstItem="mez-pZ-zfz" firstAttribute="trailing" secondItem="aQY-Ka-HFY" secondAttribute="trailing" constant="20" id="XQk-3R-pfd"/>
+                            <constraint firstItem="aQY-Ka-HFY" firstAttribute="leading" secondItem="mez-pZ-zfz" secondAttribute="leading" constant="20" id="dpW-0F-n3o"/>
+                            <constraint firstItem="aQY-Ka-HFY" firstAttribute="centerY" secondItem="mez-pZ-zfz" secondAttribute="centerY" constant="-80" id="e1J-hn-luh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Distance" image="pin" id="E2L-Fp-hKz"/>
+                    <connections>
+                        <outlet property="distanceLbl" destination="aQY-Ka-HFY" id="Xum-6L-D3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqO-6F-cm0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="431"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="6dm-dQ-MGo">
+            <objects>
+                <viewController storyboardIdentifier="DistanceListVC" id="i7f-av-75g" customClass="DistanceListVC" customModule="LocationBaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gyt-Gh-kYB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-Fp-T7A">
+                                <rect key="frame" x="0.0" y="104" width="414" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ9-Tf-ugS">
+                                <rect key="frame" x="119.5" y="54" width="175.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gOO-Rh-jL4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7kg-Fp-T7A" firstAttribute="leading" secondItem="gOO-Rh-jL4" secondAttribute="leading" id="Mrg-og-w6a"/>
+                            <constraint firstItem="HZ9-Tf-ugS" firstAttribute="top" secondItem="gOO-Rh-jL4" secondAttribute="top" constant="10" id="bLy-XE-24q"/>
+                            <constraint firstItem="7kg-Fp-T7A" firstAttribute="top" secondItem="gOO-Rh-jL4" secondAttribute="top" constant="60" id="kf4-jh-oUB"/>
+                            <constraint firstItem="7kg-Fp-T7A" firstAttribute="trailing" secondItem="gOO-Rh-jL4" secondAttribute="trailing" id="s6p-cF-Zbb"/>
+                            <constraint firstItem="7kg-Fp-T7A" firstAttribute="bottom" secondItem="gOO-Rh-jL4" secondAttribute="bottom" id="t3M-WR-vlJ"/>
+                            <constraint firstItem="HZ9-Tf-ugS" firstAttribute="centerX" secondItem="gOO-Rh-jL4" secondAttribute="centerX" id="vV6-Aw-DK1"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="dataList" id="zff-G0-Yax"/>
+                    <connections>
+                        <outlet property="tableView" destination="7kg-Fp-T7A" id="8jo-bf-m9g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnN-h6-63a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="1105"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="p2H-NS-Lns">
+            <objects>
+                <viewController storyboardIdentifier="MapView" id="P5G-pB-soi" customClass="MapView" customModule="LocationBaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aTN-Hm-sAr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1J5-g8-CcC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S93-bo-x0o">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ezz-ab-MzK"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Stop Tracking">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopTracking:" destination="P5G-pB-soi" eventType="touchUpInside" id="GOj-f7-P8p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NGu-6o-0lQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NGu-6o-0lQ" firstAttribute="bottom" secondItem="S93-bo-x0o" secondAttribute="bottom" id="Ued-x9-7Ez"/>
+                            <constraint firstItem="1J5-g8-CcC" firstAttribute="trailing" secondItem="NGu-6o-0lQ" secondAttribute="trailing" id="X6r-vI-kcS"/>
+                            <constraint firstItem="1J5-g8-CcC" firstAttribute="leading" secondItem="NGu-6o-0lQ" secondAttribute="leading" id="YgE-W7-yut"/>
+                            <constraint firstItem="1J5-g8-CcC" firstAttribute="bottom" secondItem="NGu-6o-0lQ" secondAttribute="bottom" id="aTO-uN-S8q"/>
+                            <constraint firstItem="S93-bo-x0o" firstAttribute="leading" secondItem="NGu-6o-0lQ" secondAttribute="leading" id="cbm-fd-cLv"/>
+                            <constraint firstItem="NGu-6o-0lQ" firstAttribute="trailing" secondItem="S93-bo-x0o" secondAttribute="trailing" id="hQF-XL-d6N"/>
+                            <constraint firstItem="1J5-g8-CcC" firstAttribute="top" secondItem="NGu-6o-0lQ" secondAttribute="top" id="tX0-8z-H5w"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="dOZ-jz-fDf"/>
+                    <connections>
+                        <outlet property="mapVw" destination="1J5-g8-CcC" id="WLO-Zy-2am"/>
+                        <outlet property="startStopBtn" destination="S93-bo-x0o" id="4cA-fz-laA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JaI-Vp-vFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1615.9420289855075" y="-216.29464285714286"/>
+        </scene>
+        <!--Tabbar Controller-->
+        <scene sceneID="iwt-st-F0J">
+            <objects>
+                <tabBarController id="iEv-qR-5Ww" customClass="TabbarController" customModule="LocationBaseApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Cl-6f-QPg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="P5G-pB-soi" kind="relationship" relationship="viewControllers" id="PEz-9I-KAL"/>
+                        <segue destination="RCI-ya-0Zs" kind="relationship" relationship="viewControllers" id="fr6-sG-nd8"/>
+                        <segue destination="i7f-av-75g" kind="relationship" relationship="viewControllers" id="KZ0-b1-J2q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lEh-16-crV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="726" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dataList" width="25" height="25"/>
+        <image name="map" width="25" height="25"/>
+        <image name="pin" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
